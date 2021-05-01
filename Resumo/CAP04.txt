@@ -1,0 +1,10 @@
+Capítulo 04 - Testando alteração e deleção
+Nesse capítulo aprendemos:
+
+Quando fazemos uma alteração no banco de dados, tipo INSERT, DELETE e UPDATE usando o Hibernate, essa alteração nem sempre ocorre imediatamente, e isso pode gerar um resultado enganoso no teste. Para isso devemos usar os comandos:
+		session.flush();
+		session.clear();
+
+	Com isso forçamos que nosso comandos rode no banco de dados. 	
+	Depois disso podemos consultar a base de dados e as mudanças devem ter ocorrido. 
+	Isso não ocorre se estivermos usando JDBC.
