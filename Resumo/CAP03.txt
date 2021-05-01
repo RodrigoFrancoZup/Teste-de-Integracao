@@ -1,0 +1,6 @@
+Capítulo 03 - Praticando com consultas mais complicadas
+Nesse capítulo aprendemos:
+
+Testes de Integração são dificeis de prever todos os cenários, ainda mais quando estamos executando uma Query complexa;
+
+Palavras do professor: "Geralmente o grande desafio é justamente montar o cenário e validar o resultado esperado no sistema externo. No caso de banco de dados, precisamos fazer INSERTs, DELETEs, e SELECTs para validar. Além disso, ainda precisamos manter o estado do sistema consistente, ou seja, precisamos limpar o banco de dados constantemente para que um teste não atrapalhe o outro."
