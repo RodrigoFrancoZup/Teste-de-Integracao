@@ -1,0 +1,12 @@
+Capítulo 01 - Escrevendo o primeiro teste de integração
+Nesse capítulo aprendemos:
+
+Teste de unidade é um teste que isola a classe de suas dependencias, a classe é testada sozinha. Testes de unidades fazem sentido quando as classes contem regras de negócio;
+
+Teste de integração não isola a classe de suas dependências, esse teste irá testar a classe e os serviços que ela usa de maneira integrada. Esse tipo de teste é util para testar classes cuja finalidade é se comunicar com outros serviços (classes repository, DAO...);
+
+Em testes de banco de dados não é uma boa prática usar Mocks, pois um bom teste de BD é acessar o banco de dados real e não uma simualçao. Ao simular um BD podemos estar pegando o erro na classe DAO e levando-o para classe de teste e assim teremos um falso positivo;
+
+Devemos sempre fechar a Session depois de usar o banco em um teste, para assim os outros testes poderem acessar o banco de dados;
+
+Se vamos testar um select no banco de dados o ideal é fazer um insert antes e testar com esses valores inseridos.
