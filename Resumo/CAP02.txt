@@ -1,0 +1,18 @@
+Capítulo 02 - Organizando o teste de integração
+Nesse capítulo aprendemos:
+
+⦁	Que ao usar o banco de dados original para se fazer os testes, acabamos colocando "lixo" na base de dados e que esse "lixo" pode interferir em outros testes. Para resolver isso é só apagar o conteudo inserido no banco por cada teste. E como fazer isso? Veremos a seguir;
+
+⦁	Através da Session podemos iniciar uma transação e com ela podemos voltar tudo ao estado original (antes de comeãr a transação - chamamos isso de rollback). Então antes de iniciar um teste abrimos a transação e depois de finalizar o teste damos o rollback;
+
+⦁	Código que inicia a transação: 
+	
+		session.beginTransaction();
+
+⦁	Código que inicia faz rollback: 
+
+		session.getTransaction().rollback();
+
+⦁	Devemos iniciar a transação e os atributos da classe no método setUp anotado com @Before;
+
+⦁	Devemos dar rollback e fechar a session no método end anotado com @After.
